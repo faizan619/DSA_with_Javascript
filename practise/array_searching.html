@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Searching</title>
+</head>
+<body>
+    <div>Array Searching in JaraScript</div>
+
+    <script>
+        let data = [10,70,40,30,50,20,60];
+        let searchEle = 43;
+        console.warn(data);
+        for(let i =0;i<data.length;i++){
+            // console.warn("Before : ",data[i]);
+            if(data[i] === searchEle){
+                console.warn("Element is present in the Array");
+                break;
+            }
+            else{
+                console.warn("Found Till now : ",data[i]);
+            }
+        }
+        
+    </script>
+</body>
+</html>
