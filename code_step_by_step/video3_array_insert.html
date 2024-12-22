@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Element in Array</title>
+</head>
+<body>
+    <div>
+
+    </div>
+    <script>
+        let data = [60,30,10,67,40];
+        let newEl = 69;
+        let position = 2;
+        for(let i = data.length-1;i>=0;i--){
+            console.warn(data[i]);
+            if(i>=position){
+                data[i+1] = data[i];
+                // console.warn(i)
+                if(i == position){
+                    data[i] = newEl;
+                }
+            }
+        }
+        console.log("New Data : ",data);
+    </script>
+</body>
+</html>
+
+a = [1,2,3,4,5]
