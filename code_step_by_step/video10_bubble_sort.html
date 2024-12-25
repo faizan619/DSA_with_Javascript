@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Sorting</title>
+</head>
+<body>
+    <div>
+        bubble Sorting
+    </div>
+    <script>
+        let data = [40,30,12,25];
+
+        for(let i=0;i<data.length ;i++){
+            for(let j=0;j<data.length;j++){
+                // console.log("data[j] : ",data[i])
+                console.log("data[i] : ",data)
+                // console.log(data[j])
+                if(data[j]>data[j+1]){
+                    let temp = data[j];
+                    data[j] = data[j+1];
+                    data[j+1] = temp;
+                }
+            }
+        }
+        console.log(data)
+    </script>
+</body>
+</html>https://www.youtube.com/watch?v=6-C6RqryjRk
