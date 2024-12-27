@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Recursion</title>
+</head>
+<body>
+    <div>Reverse Recursion using javascript</div>
+    <script>
+        let data = [5,12,65,35,89,72,55];
+        // console.log(data.reverse())
+        let temp;
+        function customReverse(data,start,end){
+            console.log("start : ",start," | end : ",end);
+            console.log(data)
+            if(start<end){
+                temp = data[start];
+                data[start] = data[end];
+                data[end] = temp;
+                customReverse(data,start+1,end-1)
+            }
+        }
+        // console.log("out : ",data)
+
+        // customReverse(data,0,data.length-1)
+    </script>
+</body>
+</html>
