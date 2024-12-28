@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stack with class</title>
+  </head>
+  <body>
+    <div>Stack With Class in javascript</div>
+    <script>
+      class StackClass {
+        item = [];
+        currentSize;
+        maxSize;
+
+        constructor(size) {
+          // console.log("Class is Classed!");
+          this.maxSize = size;
+          this.currentSize = this.item.length;
+        }
+
+        pushfunction(newVal) {
+            if(this.currentSize>=this.maxSize){
+                console.warn("stack is fulled!");
+            }
+            else{
+                this.item[this.currentSize] = newVal;
+                this.currentSize++;
+            }
+            // console.log(this.item)
+        }
+
+        popfunction() {
+            if(this.currentSize>0){
+                this.currentSize--;
+                this.item.length = this.currentSize;
+            }else{
+                console.warn("Stack is Already Empty!");
+            }
+        }
+
+        displayfunction() {
+            console.log(this.item);
+        }
+      }
+
+      st1 = new StackClass(5);
+      st1.pushfunction(20);
+      st1.pushfunction(40);
+      st1.pushfunction(60);
+      st1.pushfunction(80);
+      st1.pushfunction(30);
+      st1.pushfunction(50);
+      st1.popfunction();
+      st1.popfunction();
+      st1.popfunction();
+      st1.popfunction();
+      st1.popfunction();
+      st1.popfunction();
+      st1.displayfunction();
+    </script>
+  </body>
+</html>

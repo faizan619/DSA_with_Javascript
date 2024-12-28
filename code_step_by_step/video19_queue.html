@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queue in javascript</title>
+</head>
+<body>
+    <div>Queue in Javascript</div>
+    <script>
+        let data = [];
+        let currentSize = data.length;
+        let maxSize = 5;
+
+        // enqueue
+        function pushdata(newVal){
+            if(currentSize>=maxSize){
+                console.warn("Queue is already fulled");
+            }
+            else{
+                data[currentSize] = newVal;
+                currentSize++;
+            }
+        }
+        // dequeue
+        function popdata(){
+            for(let i=0;i<data.length;i++){
+                console.warn(data[i]);
+                // data[]
+            }
+        }
+
+        function display(){
+            console.log(data);
+        }
+
+        pushdata(10);
+        pushdata(15);
+        pushdata(20);
+        pushdata(25);
+        pushdata(30);
+        display();
+    </script>
+</body>
+</html>
