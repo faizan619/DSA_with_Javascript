@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+<body>
+    <div class="container">
+        Reverse String With Stack
+    </div>
+    <script>
+        let data = [];
+        let currentSize = data.length;
+        let revStack = [];
+        let s1 = 0;
+
+        function pushFunction(newVal){
+            data[currentSize] = newVal;
+            currentSize++;
+            console.log("push : ",data)
+        }
+
+        function popFunction(){
+            let currentRemovingElement = data[currentSize-1];
+            // revStack[s1] = currentRemovingElement;
+            // s1++
+            currentSize--;
+            data.length = currentSize;
+            // console.warn(currentRemovingElement);
+            return currentRemovingElement;            
+        }
+
+        function reverseStr(item){
+            console.log("String to be reverse : ",item);
+            for(let i=0;i<item.length;i++){
+                pushFunction(item[i])
+            }
+
+            for(let i=0;i<item.length;i++){
+                // console.log("pop : ",popFunction())
+                item[i] = popFunction()
+            }
+            // console.log("rev string : ",revStack)
+        }
+
+        let str = "faizan";
+        str = str.split("");
+        // console.log(str)
+        reverseStr(str)
+        console.log(str)
+    </script>
+</body>
+</html>
