@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack in Javascript</title>
+</head>
+<body>
+    <div class="container">
+        Stack in Javascript
+    </div>
+
+    <script>
+        let data = [];
+        let currentSize = data.length;
+        let max = 5;
+
+        function pushstack(newVal){
+            console.log("========================")
+            console.log("current size : ",currentSize)
+            console.log("max : ",max)
+            if(currentSize<max){
+                data[currentSize] = newVal;
+                currentSize++;
+            }
+            else{
+                console.log("Stack is filled! You Cannot add : ",newVal)
+            }
+            console.log(data)
+        }
+
+        function popstack(){
+            if(currentSize>0){
+                currentSize--;
+                data.length = currentSize;
+
+            }
+            else{
+                console.log("stack is emply! Please add some element!");
+            }
+            console.log(data)
+        }
+
+        pushstack(2);
+        pushstack(4);
+        pushstack(5);
+        pushstack(7);
+        pushstack(9);
+        pushstack(3);
+        pushstack(6);
+        pushstack(8);
+
+        popstack();
+        popstack();
+        popstack();
+        popstack();
+
+
+    </script>
+</body>
+</html>
