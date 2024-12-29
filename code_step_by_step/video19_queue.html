@@ -24,9 +24,47 @@
         }
         // dequeue
         function popdata(){
-            for(let i=0;i<data.length;i++){
-                console.warn(data[i]);
-                // data[]
+            if(currentSize>0){
+
+                for(let i=0;i<data.length;i++){
+                    // console.warn(data[i]);
+                    data[i] = data[i+1]
+                }
+                currentSize--;
+                data.length = currentSize;
+            }
+            else{
+                console.warn("Queue is already emply!");
+                
+            }
+        }
+
+        function frontfunction(){
+            // if(currentSize>0){
+            if(isEmpty()){
+                console.log("Front : ",data[0])
+            }
+            else{
+                console.warn("Queue is empty!");
+            }
+        }
+
+        function rearfunction(){
+            // if(currentSize>0){
+            if(isEmpty()){
+                console.log("Rear : ",data[currentSize-1])
+            }
+            else{
+                console.warn("Queue is empty!");
+            }
+        }
+
+        function isEmpty(){
+            if(currentSize<=0){
+                return true;
+            }
+            else{
+                return false;
             }
         }
 
