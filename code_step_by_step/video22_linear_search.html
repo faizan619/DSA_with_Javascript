@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Search</title>
+</head>
+<body>
+    <div class="container">
+        Linear Search
+    </div>
+    <script>
+        let data = [30,13,45,78,4,9,50];
+        let find = 22;
+        let pos;
+        for(let i =0;i<data.length;i++){
+            if(data[i] === find){
+                pos = i;
+                console.log("Element is found on position : ",i);
+                break;
+            }
+            // else{
+            //     console.log("Element is not found in : ",i)
+            // }
+        }
+        if(!pos){
+            console.log("Element is not found!");
+        }
+    </script>
+</body>
+</html>
