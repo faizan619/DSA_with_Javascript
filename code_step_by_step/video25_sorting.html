@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting</title>
+</head>
+<body>
+    <div>Sorting Algorithm</div>
+    <script>
+        let items = [20,12,53,3];
+        function selectionSort(data){
+            console.log(data);
+            for(let i =0;i<data.length;i++){
+                console.log(`data[i][${i}] : ${data[i]}`);
+                minId=i;
+                for(let j=i+1;j<data.length;j++){
+                    if(data[j]<data[minId]){
+                        minId = j;
+                    }
+                }
+                let temp = data[minId];
+                data[minId] = data[i];
+                data[i] = temp;
+            }
+            console.log("data2 : ",data)
+        }
+
+        selectionSort(items);
+    </script>
+</body>
+</html>
