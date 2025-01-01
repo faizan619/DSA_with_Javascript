@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertion Sorting</title>
+</head>
+<body>
+    <div>Insertion Sorting in javascript</div>
+    <script>
+        let arr = [12,11,13,5,6];
+
+        function insertionSort(data){
+            console.log("data : ",data);
+            let i, current, j;
+            for(i=1;i<data.length;i++){
+                console.log("i : ",i);
+                current = data[i];
+                j = i - 1;
+                while(j>=0 && data[j]>current){
+                    data[j+1] = data[j]
+                    j=j-1;
+                }
+                data[j+1]=current;
+            }
+        }
+
+        insertionSort(arr);
+        console.log(arr)
+
+
+        // data = [15,20,23,3,9,11,0,8]
+        // sort every no. and keep the 23,3 at the last
+    
+    </script>
+</body>
+</html>
