@@ -9,6 +9,8 @@
     <div class="container">
       <p>1) Array Traversing</p>
       <p>2) Array Insertion</p>
+      <p>3) Array Deletion</p>
+      <p>4) Array Searching</p>
     </div>
 
     <script>
@@ -64,6 +66,29 @@
         }
     }
     */ 
+
+    /*
+    let data = [5,10,15,20,25,30];
+    let position = 4;
+    for(let i  =0;i<data.length;i++){
+        if(i>=position){
+            data[i] = data[i+1];
+        }
+        console.log(data)
+    }
+    data.length--;
+    
+    console.log("final : ",data)
+    */
+
+    let data = [3,7,11,14,17,19,22,24,27,30];
+    let findEle = 17;
+    for(let i = 0;i<data.length;i++){
+        console.log("Data : ",data[i]);
+        if(data[i] === findEle){
+            console.log("Data is Available in the Array")
+        }
+    }
     </script>
   </body>
 </html>
