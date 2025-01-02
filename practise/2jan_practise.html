@@ -11,10 +11,11 @@
       <p>2) Array Insertion</p>
       <p>3) Array Deletion</p>
       <p>4) Array Searching</p>
+      <p>5) Array Merging</p>
     </div>
 
     <script>
-      /*
+    /*
         console.log("Array Traversing")
         let data = [3,7,11,14,17,19,22,24,27,30];
         let i = 0;
@@ -28,8 +29,7 @@
         // }
         */
 
-
-        /*
+    /*
 
       console.log("Array Insertion");
       let data = [3, 7, 11, 14, 17, 19, 22, 24, 27, 30];
@@ -81,14 +81,31 @@
     console.log("final : ",data)
     */
 
-    let data = [3,7,11,14,17,19,22,24,27,30];
-    let findEle = 17;
-    for(let i = 0;i<data.length;i++){
-        console.log("Data : ",data[i]);
-        if(data[i] === findEle){
-            console.log("Data is Available in the Array")
+    /*
+        let data = [3,7,11,14,17,19,22,24,27,30];
+        let findEle = 17;
+        for(let i = 0;i<data.length;i++){
+            console.log("Data : ",data[i]);
+            if(data[i] === findEle){
+                console.log("Data is Available in the Array")
+            }
         }
+    */
+    
+    /*
+    console.log("Array Merging - unordered!");
+    let data = [11,22,33,44,55];
+    let data2 = [1,2,3,4,5,6,7];
+    let data3 = [];
+    for(let i=0;i<data.length;i++){
+        data3[i] = data[i];
     }
+    console.log(data3)
+    for(let i =0;i<data2.length;i++){
+        data3[data.length+i] = data2[i];
+    }
+    console.log(data3)
+    */
     </script>
   </body>
 </html>
