@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video 11 to Video 15</title>
+</head>
+<body>
+    <div class="container">
+        <p>1) Simple Recursion Example</p> 
+        <p>2) Factorial Using Recursion</p>
+        <p>3) InDirect Recursion</p>
+        <p>4) Stack</p>
+        <p>5) Reverse Recursion</p>
+    </div>
+    <script>
+
+        /*
+        console.log("Recursion Example")
+        let a = 0;
+        function HelloWorld(item){
+            if(item<=10){
+                console.log("Hello World",item);
+                item++;
+                HelloWorld(item);
+            }
+        }
+
+        HelloWorld(a);
+        
+        console.log("Factorial Using Recursion!");
+       let num = 6;
+        function Factorial(item){
+            if(item<=0){
+                console.log("Number : ",item);
+                return 1;
+            }
+            console.log("Number : ",item);
+            return item*Factorial(item-1);
+        }
+
+        console.log(Factorial(num));
+        */
+    
+        /*
+        console.log("Indirect Recurison");
+        let time = 8;
+        let projects = 0;
+
+        function doOtherProject(time){
+            projects++;
+            DoProject(time-2)
+        }
+
+        function DoProject(time){
+            console.log("Project Coding")
+            if(time>=0){
+                console.log("I have Done ",projects," With ",time," Hours in Hands");
+                doOtherProject(time);
+            }
+            else{
+                console.log("Time Ups! Now You Can leave The Ferms");
+            }
+        }
+
+        DoProject(time);
+        */
+    
+        /*
+        console.log("Stack");
+
+        let data = [1,2,3,4];
+        let CurrCount = data.length;
+
+        function InsertElement(ele){
+            data[CurrCount] = ele;
+            CurrCount++;
+        }
+
+        function RemoveElement(){   
+            CurrCount--;            
+            data.length = CurrCount;
+        }
+
+        function Display(){console.log(data);}
+
+        InsertElement(5);
+        InsertElement(10);
+        InsertElement(15);
+        InsertElement(20);
+        Display();
+        RemoveElement();
+        Display();
+
+        */
+
+        /*
+        let data = [5,12,65,35,89,72,55,22,11];
+        let temp;
+
+        console.log("Reverse Recursion ")
+        function ReverseRecursion(data,start,end){
+            console.log("start : ",start," End : ",end)
+            console.log("Data : ",data)
+            if(start<end){
+                temp = data[start];
+                data[start] = data[end];
+                data[end] = temp;
+                ReverseRecursion(data,start+1,end-1);
+            }
+        }
+
+        ReverseRecursion(data,0,data.length-1);
+        */
+       
+        let data = [5,12,65,35,89,72,55,22,11];
+        for(let i=0;i<data.length;i++){
+            console.log("Re Run")
+            for(let j = 0;j<data.length;j++){
+                // console.log(data[j])
+                if(data[j]>data[j+1]){
+                    let temp = data[j];
+                    data[j] = data[j+1];
+                    data[j+1] = temp;
+                }
+                console.log(data)
+            }
+        }
+    </script>
+</body>
+</html>
