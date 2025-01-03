@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video 6 to video 10</title>
+  </head>
+  <body>
+    <div>
+      <p>6) Array Merging With Sorting</p>
+    </div>
+    <script>
+      /*
+
+        console.log("Array Merging With Sorting")
+        let data1 = [2,4,6,8,10];                                   // -Initialization- O(1)
+        let data2 = [1,3,5,7,9,11,13,15,17,19];                     // -Initialization- O(1)
+        let data3 = [];                                             // -Initialization- O(1)
+        let d1 = 0;                                                 // -Initialization- O(1)
+        let d2 = 0;                                                 // -Initialization- O(1)
+        let d3 = 0;                                                 // -Initialization- O(1)
+        while(d1<data1.length && d2<data2.length){                  // -Loop- O(N)
+            if(data1[d1]<data2[d2]){                                // -If Condition- O(1)
+                data3[d3] = data1[d1];                              // -Assignment- O(1)
+                d1++;                                               // -Increment- O(1)
+                d3++;                                               // -Increment- O(1)
+            }
+            else{
+                data3[d3] = data2[d2];                              // -Assignment- O(1)
+                d2++;                                               // -Increment- O(1)
+                d3++;                                               // -Increment- O(1)
+            }
+        }
+        console.log("data3[A] : ",data3)
+        
+        while(d1<data1.length){                                     // -Loop- O(n)
+            data3[d3] = data1[d1];                                  // -Assignment- O(1)
+            d1++;                                                   // -Increment- O(1)
+            d3++;                                                   // -Increment- O(1)
+        }
+        console.log("data3[B] : ",data3)
+        while(d2<data2.length){                                     // -Loop- O(n)
+            data3[d3] = data2[d2];                                  // -Assignment- O(1)
+            d2++;                                                   // -Increment- O(1)
+            d3++;                                                   // -Increment- O(1)
+        }
+        console.log("data3[C] : ",data3)                            // O(3N+19) = O(N)
+        */
+
+      /*
+      console.log("Bubble Sorting");
+      let data = [30,3,12,15,6,21,27,9,24,18];                  // -initialization- O(1)
+      for (let i = 0; i < data.length; i++) {                   // -Loop- O(n)
+        console.log("Pointer Restarts")
+        // console.log(`Data[${i}][i] = ${data[i]}`)
+        for (let j = 0; j < data.length; j++) {                 // -Loop- O(n*n)
+          // console.log(`Data[${j}][j] = ${data[j]}`)
+          if (data[j] > data[j + 1]) {        
+            console.log(`Value ${data[j]} is Greater than ${data[j+1]}`)                  // -Conditon- O(1)
+            console.log("Before Change : ",data);
+            temp = data[j];                                     // -Assignment- O(1)
+            data[j] = data[j + 1];                              // -Assignment- O(1)
+            data[j + 1] = temp;                                 // -Assignment- O(1)
+            console.log("After Change : ",data);
+          }
+        }
+      }                                                         // - O(N^2+5) = O(N^2)
+                                                               */
+    </script>
+  </body>
+</html>
