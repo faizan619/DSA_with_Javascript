@@ -133,46 +133,45 @@
         let currCount = data.length;
 
         let revStr = [];
-        let s1 = data.revStr;
+        let s1 = revStr.length;
 
         function InsertElement(item){
             data[currCount] = item;
             currCount++;
-            console.log("[",item,"] Inserted Successfully");
+            DisplayString();
         }
 
         function RemoveElement(){
-            let removingElement = data[currCount]-1;
-            console.log("Removing Element : ",removingElement);
+            DisplayString();
+            let removingElement = data[currCount-1];
+            revStr[s1] = removingElement;
+            s1++;
+            currCount--;
+            data.length = currCount;
         }
 
         function DisplayString(){
             console.log(data);
         }
 
-        let revArray = [];
-        revCount = revArray.length;
         function ReverseString(str){
-            // for(let i=0;i<str.length;i++){
-            //     console.log(str[i]);
-            // }
-            for(let i = str.length-1;i>=0;i--){
-                console.log(str[i]);
-                revArray[revCount] = str[i];
-                revCount++;
-            } 
+            console.log("Insertion of Element");
+            for(let i=0;i<str.length;i++){
+                InsertElement(str[i])
+            }
+
+            console.log("Deletion of Element");
+            for(let i=0;i<str.length;i++){
+                RemoveElement();
+            }
         }
 
-        let name = "faizan"
+        let name = "suman"
         name = name.split("")
+        // name = ['s','u','m','a','n']
         ReverseString(name);
-        console.log("Reverse Array : ",revArray);
-
-        InsertElement(20)
-        InsertElement(40)
-
-        DisplayString();
-        */
+        
+        
 
 
 
@@ -188,6 +187,20 @@
 
         // HelloWorld(1);
 
+*/
+
+
+
+function star(){
+    for(let i =0;i<=5;i++){
+        for(let j=0;j<=i;j++){
+            console.log("*");
+        }
+        console.log("");
+    }
+}
+
+star()
 
 
 
@@ -245,12 +258,7 @@
 
 
 
-
-
-
-
-
-      
+      /*
         let data = [];
         let currCount = data.length;
 
@@ -278,7 +286,7 @@
         displayData();
         removeElement();
         displayData();
-        
+        */
     </script>
   </body>
 </html>
