@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video 23 - video 24</title>
+  </head>
+  <body>
+    <div class="container">
+      <p>1) Iterative Binary Search</p>
+      <p>2) Recursive Binary Search</p>
+      <p>3) Sorting Practise</p>
+    </div>
+
+    <script>
+      /*
+
+        console.log("Iterative Binary Search")
+        let data = [2,3,6,8,12,16,20,22,26,28];
+        let start = 0;
+        let end = data.length-1;
+        let findEle = 7;
+        let position ;
+
+        while(start<=end){
+            mid = Math.floor((start+end)/2);
+            console.log(mid)
+            console.log("start : ",start);
+            console.log("end : ",end)
+            if(data[mid] ===  findEle){
+                position = mid;
+                break;
+            }
+            else if(data[mid]>findEle){
+                end = mid-1;
+            }
+            else{
+                start = mid+1
+            }
+            // break;
+        }
+
+        if(position){
+            console.log("Element found in ",position);
+        }
+        else{
+            console.log("Element not found!")
+        }
+            */
+
+      /*
+      console.log("Recursive Binary Search Started");
+
+      let data = [3, 6, 8, 12, 15, 17, 19, 20, 25];
+      let start = 0;
+      let end = data.length - 1;
+      let find = 13;
+      let position;
+
+      function RecursiveBinarySearch(data,start,end) {
+        if (start <= end) {
+          let mid = Math.floor((start + end) / 2);
+          console.log("mid", mid);
+          if (data[mid] === find) {
+            position = mid;
+            // console.log("Element found in positon : ",position);
+            return true;
+          } else if (data[mid] > find) {
+            RecursiveBinarySearch(data, start, mid - 1);
+          } else {
+            RecursiveBinarySearch(data, mid + 1, end);
+          }
+        } else {
+          console.log("Recursive Binary Search Completed");
+          return false;
+        }
+      }
+
+      RecursiveBinarySearch(data, start, end);
+      if(position){
+          console.log("Element :",find," is found at positon : ",position);
+        }
+        else{
+            console.log("Element is not present!");
+        }
+
+        */
+
+
+
+        /*
+       console.log("Practise of sorting algortihm")
+        let data = [9,7,13,6,25,3,16,20];
+        console.log("data: ",data);
+
+        for(let i =0;i<data.length;i++){
+            for(let j =0;j<data.length -1 -i;j++){
+                if(data[j]>data[j+1]){
+                    temp = data[j];
+                    data[j] = data[j+1];
+                    data[j+1] = temp;
+                }
+                console.log(data)
+            }
+        }
+            */
+    </script>
+  </body>
+</html>

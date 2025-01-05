@@ -1,7 +1,8 @@
 1) Bubble Sorting
 2) Array Sorting using nested Loops
 3) InDirect Resursion
-
+4) sorting Video 25 and 26
+5) Insertion sort 
 
 ---------------------------------------------------------------------------------------------------
 1) Head and Tail Recursion
