@@ -8,7 +8,7 @@
 <body>
     <div>
         Check String is Anagram
-
+<br>
         1)What is anagram (two string which has same character with different order)
         like for cat -> atc
                      -> tac
@@ -18,7 +18,28 @@
     </div>
 
     <script>
-        
+        function checkAnagram(str1,str2){
+            let ObjStr = {}
+            if(str1.length !== str2.length){
+                return false;
+            }
+            for(ch of str1){
+                ObjStr[ch] = (ObjStr[ch] || 0) +1;
+            }
+            console.log(ObjStr)
+            for(ch of str2){
+                if(!ObjStr[ch]){
+                    return false;
+                }
+                if(ObjStr[ch]){
+                    ObjStr[ch]--;
+                }
+                console.log(ObjStr)
+            }
+            return true;
+        }
+
+        console.log(checkAnagram("faizan",'zaniaf'));
     </script>
 </body>
 </html>
