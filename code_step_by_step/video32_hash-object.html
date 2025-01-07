@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hash Table </title>
+</head>
+<body>
+    <div class="container">
+         Object - Hash Table 
+    </div>
+
+    <script>
+        let obj1 = {
+            name:"faizan",
+            age:23,
+            role:"software engineer",
+            mail:"faizan@gmail.com",
+            getName:function(){
+                return this.name;
+            }
+        };
+        // obj1.friend = "shifa"
+
+        // console.log(obj1.getName())
+        // delete obj1.name;
+        // console.log(obj1)
+
+        for(x in obj1){
+            console.log(x," = ",obj1[x])
+        }
+
+        console.log(Object.keys(obj1))
+        console.log(Object.values(obj1))
+        console.log(Object.entries(obj1))
+    </script>
+</body>
+</html>

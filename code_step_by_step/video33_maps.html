@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps</title>
+</head>
+<body>
+    <div class="container">
+        1) Maps
+    </div>
+
+    <script>
+        let data = new Map([
+            ['name','faizan'],
+            [true,'bool key'],
+            ['age',22]
+        ]);
+
+        data.set('color','green')
+        // console.log(data.size)
+        // console.log(data)
+        // console.log(data.has('age'))
+        // console.log(data.get('name'))
+        // console.log(data)
+        // data.clear()
+
+        for(x of data){
+            console.log(x[0]," = ",x[1])
+        }
+        console.log("=================================")
+
+        data.forEach((val,key)=>{
+            console.log(val," = ",key)
+        })
+
+
+        // how will uh remove an element in maps
+    </script>
+</body>
+</html>
