@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linked List</title>
+</head>
+<body>
+    <div class="container">
+        LinkedList in javascript
+    </div>
+
+    <script>
+        // linkedlist contins (head, tails, node->val and nextval)
+        // [val | nextval] -> [val | nextval] -> [val | null]
+
+        class List{
+            constructor(data){
+                this.head = {
+                    value:data,
+                    next:null
+                }
+
+                this.tail = this.head;
+                this.size = 1;
+            }
+
+            addNode(nodeData){
+                let newNode = {
+                    value:nodeData,
+                    next:null
+                };
+                this.tail.next = newNode;
+                this.tail = newNode;
+                this.size++; 
+            }
+        }
+
+        let list = new List(200);
+        list.addNode(300);
+        list.addNode(400);
+        list.addNode(500);
+        list.addNode(600);
+        console.log(list);
+    </script>
+</body>
+</html>
