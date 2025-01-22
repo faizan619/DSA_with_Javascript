@@ -12,6 +12,17 @@
       2) Array Insertion <br />
       3) Array Deletion <br />
       4) Array Merging <br />
+      5) Array Sorting With Merging <br>
+      6) Array Sorting With Merging Reverse <br>
+      7) Bubble Sort <br>
+      8) GPT Practise Question <br>
+            a) Find the Second Largest Element <br>
+            b) Find Missing Number in an Array <br>
+            c) Rotate an Array ->
+            For example, rotating [1, 2, 3, 4, 5] twice gives [4, 5, 1, 2, 3]. <br>
+            d) Move All Zeros to End ->
+            Input: [0, 1, 0, 3, 12]
+            Output: [1, 3, 12, 0, 0] <br>
     </div>
   </body>
   <script>
@@ -137,8 +148,72 @@
     let arr6A = [1, 3, 5, 7, 9];
     let arr6B = [2, 4, 6, 8, 10];
     let arr6C = [];
-    arraySortingWithMergingReverse(arr6A,arr6B,arr6C,0,0,0);
+    // arraySortingWithMergingReverse(arr6A,arr6B,arr6C,0,0,0);
 
+    function bubbleSort(arr1){
+        console.log("Before : ",arr1);
+        for(let i=0;i<arr1.length;i++){
+            for(let j=0;j<arr1.length;j++){
+                console.log(arr1)
+                if(arr1[j]>arr1[j+1]){
+                    temp = arr1[j+1];
+                    arr1[j+1] = arr1[j];
+                    arr1[j] = temp;
+                }
+            }
+        }
+        console.log("After : ",arr1);
+    }
+
+    // let arr6 = [44,37,22,31,19,55,52,48,38];
+    let arr6 = [20,30,10];
+    // bubbleSort(arr6);
+
+  </script>
+
+  <script>
+    // Find the Second Largest Element
+    //     Find the Second Largest Element
+    // Given an array of integers, write a function to find the second largest element in the array without sorting.
+
+    function findSecondLargestElement(arr1){
+        console.log(arr1)
+        let largest = 0;
+        let secondLargest = 0;
+        for(let i =0;i<arr1.length;i++){
+            if(arr1[i] > largest){
+                secondLargest = largest
+                largest = arr1[i];
+            }
+            else if(arr1[i] > secondLargest && arr1[i] !== largest){
+                secondLargest = arr1[i];
+            }
+        }
+        return secondLargest;
+    }
+
+    let test1 = [33,22,43,45,55,56,64,76,77,67,48,68,90,49,88];
+    // // let test1 = [33,22,43,60,45,55];
+    // console.log("Second Largest Number : ",findSecondLargestElement(test1));
+
+    function rotateArray(data,round){
+        let a = 1;
+        console.log("original : ",data)
+        while(a<=round){
+            let last = data[data.length-1];
+            for(let i = data.length-1;i>=0;i--){
+                data[i] = data[i-1]
+                if(data[i] == undefined){
+                    data[i] = last;
+                }
+            }
+            a++;
+            console.log(data);
+        }
+    }
+
+    let arr = [10,20,30,40,50];
+    rotateArray(arr,2);
 
   </script>
 </html>
