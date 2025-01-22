@@ -4,5 +4,10 @@
 4) sorting Video 25 and 26
 5) Insertion sort 
 
----------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------
 1) Head and Tail Recursion
+
+
+--------------------------------------------------------------------------
+1) 22jan_practise.html 
+    In that the function arraySortingWithMergingReverse i use reverse() function. so make a seperate code to reverse the string;

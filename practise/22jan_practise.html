@@ -1,86 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Back to Basic</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <h3>Back to Basic</h3>
-        1) Array Traversing (Both Straight and Reverse) <br>
-        2) Array Insertion <br>
-        3) Array Deletion <br>
+      <h3>Back to Basic</h3>
+      1) Array Traversing (Both Straight and Reverse) <br />
+      2) Array Insertion <br />
+      3) Array Deletion <br />
+      4) Array Merging <br />
     </div>
-</body>
-<script>
-    
-    function arrayTraversing(arr){
-        console.log("Array : ",arr)
-        for(let i =0; i<arr.length;i++){
-            console.log(`Array[${i}] = ${arr[i]}`)
-        }
+  </body>
+  <script>
+    function arrayTraversing(arr) {
+      console.log("Array : ", arr);
+      for (let i = 0; i < arr.length; i++) {
+        console.log(`Array[${i}] = ${arr[i]}`);
+      }
     }
-    
-    function arrayTraversingReverse(arr){
-        console.log("Reverse Array :",arr);
-        for(let i = arr.length-1;i>=0;i--){
-            console.log(`Array[${i}]: ${arr[i]}`)
-        }
+
+    function arrayTraversingReverse(arr) {
+      console.log("Reverse Array :", arr);
+      for (let i = arr.length - 1; i >= 0; i--) {
+        console.log(`Array[${i}]: ${arr[i]}`);
+      }
     }
-    
+
     // for traversing the Array
-    let arr1 = [9,7,5,3,2];
+    let arr1 = [9, 7, 5, 3, 2];
     // arrayTraversing(arr1);
     // arrayTraversingReverse(arr1);
 
-    function arrayInsertion(arr,pos,ele){
-        console.log("Old Array : ",arr);
-        for(let i=arr.length-1;i>=0;i--){
-            if(i>=pos){
-                arr[i+1] = arr[i];
-                console.log(arr);
-                if(i==pos){
-                    arr[i] = ele;
-                    console.log(arr);
-                }
-            }
+    function arrayInsertion(arr, pos, ele) {
+      console.log("Old Array : ", arr);
+      for (let i = arr.length - 1; i >= 0; i--) {
+        if (i >= pos) {
+          arr[i + 1] = arr[i];
+          console.log(arr);
+          if (i == pos) {
+            arr[i] = ele;
+            console.log(arr);
+          }
         }
+      }
     }
-    
-    // for inserting an array 
-    let arr2 = [10,12,14,16,18,20,22,26,28,30];
+
+    // for inserting an array
+    let arr2 = [10, 12, 14, 16, 18, 20, 22, 26, 28, 30];
     let position2 = 7;
     let element2 = 24;
     // arrayInsertion(arr2,position2,element2);
 
-
-    function arrayDeletion(arr,pos){
-        console.log(arr);
-        console.log(`Removing Element ${arr[pos]}`)
-        for(let i=0; i<arr.length;i++){
-            if(i>=pos){
-                arr[i] = arr[i+1];
-            }            
+    function arrayDeletion(arr, pos) {
+      console.log(arr);
+      console.log(`Removing Element ${arr[pos]}`);
+      for (let i = 0; i < arr.length; i++) {
+        if (i >= pos) {
+          arr[i] = arr[i + 1];
         }
-        arr.length--;
-        console.log(arr)
+      }
+      arr.length--;
+      console.log(arr);
     }
 
     // for deleting an array
-    let arr3 = [10,12,14,16,18,20,22,26,28,30];
+    let arr3 = [10, 12, 14, 16, 18, 20, 22, 26, 28, 30];
     let position3 = 4;
     // arrayDeletion(arr3,position3);
 
-    function arrayMerging(arr1,arr2,arr3){
-        console.log(arr1,arr2);
+    function arrayMerging(arr1, arr2, arr3) {
+      // console.log(arr1,arr2);
+      console.log("Before arr3 : ", arr3);
+      for (let i = 0; i < arr1.length; i++) {
+        arr3[i] = arr1[i];
+      }
+      console.log("After First Loop : ", arr3);
+
+      for (let i = 0; i < arr2.length; i++) {
+        arr3[arr1.length + i] = arr2[i];
+      }
+      console.log("After Second Loop : ", arr3);
     }
 
     // for merging array
+    let arr4A = [1, 3, 5, 7, 9];
+    let arr4B = [2, 4, 6, 8, 10];
+    let arr4C = [];
+    // arrayMerging(arr4A,arr4B,arr4C);
 
-    let arr4A = [1,3,5,7,9];
-    let arr4B = [2,4,6,8,10];
-    let arr4C = []
-    arrayMerging(arr4A,arr4B,arr4C);
-</script>
+    function arraySortingWithMerging(arr1, arr2, arr3, d1, d2, d3) {
+      console.log("Before : ", arr3);
+      while (d1 < arr1.length && d2 < arr2.length) {
+        if (arr1[d1] < arr2[d2]) {
+          arr3[d3] = arr1[d1];
+          d1++;
+        }
+        else{
+            arr3[d3] = arr2[d2];
+            d2++;
+        }
+        d3++;
+        // console.log("Process : ",arr3);
+      }
+      console.log("After : ", arr3);
+    }
+
+    // for merging with sorting array
+    let arr5A = [1, 3, 5, 7, 9];
+    let arr5B = [2, 4, 6, 8, 10];
+    let arr5C = [];
+    // arraySortingWithMerging(arr5A, arr5B, arr5C, 0, 0, 0);
+
+
+    function arraySortingWithMergingReverse(arr1,arr2,arr3,d1,d2,d3){
+        // console.log("Hello World");
+        while(d1<arr1.length && d2<arr2.length){
+            if(arr1[d1] < arr2[d2]){
+                arr3[d3] = arr1[d1];
+                d1++;
+                d3++;
+            }
+            else{
+                arr3[d3] = arr2[d2];
+                d3++;
+                d2++;
+            }
+        }
+        arr3 = arr3.reverse();
+        console.log("result : ",arr3);
+
+    }
+
+    let arr6A = [1, 3, 5, 7, 9];
+    let arr6B = [2, 4, 6, 8, 10];
+    let arr6C = [];
+    arraySortingWithMergingReverse(arr6A,arr6B,arr6C,0,0,0);
+
+
+  </script>
 </html>
