@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practise Of Array</title>
+  </head>
+  <body>
+    <div>
+      <p>1) Practise of Array GPT Questions</p>
+    </div>
+    <script>
+      function commonElement(data1, data2) {
+        console.log("Array1 :", data1);
+        console.log("Array2 :", data2);
+        let match = [];
+        let m = 0
+        for(let i =0;i<data1.length;i++){
+            console.log("Round :",i);
+            for(let j =0;j<data2.length;j++){
+                console.log("Iteration : ",j);
+                console.log("Matching : ",data1[i]," with ",data2[j]);
+                if(data1[i] == data2[j]){
+                    console.log("same");
+                    match[m] = data2[j]
+                    m++;
+                    console.log("Match : ",match);
+                    console.log("data 1 : ",data1[i]);
+                    console.log("data 2 : ",data2[j]);
+                }
+            }
+        }
+        console.log(match);
+      }
+      arr1 = [2, 5, 8, 3, 6, 9,4,43];
+      arr2 = [5, 7, 9, 4, 1, 3,22,43,23,33,35];
+    //   commonElement(arr1, arr2);
+
+    
+    </script>
+  </body>
+</html>
