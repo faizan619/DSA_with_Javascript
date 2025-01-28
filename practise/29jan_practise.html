@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InDirect Recursion</title>
+</head>
+<body>
+    <div>
+        <ol>
+            <h4>Indirect Recursion</h4>
+            <li>Odd Even Print</li>
+            <li>Count Down and Count Up</li>
+        </ol>
+    </div>
+
+    <script>
+        function printEven(num){
+            if(num<=0) return;
+            console.log("Even : ",num);
+            printOdd(num-1);
+        }
+
+        function printOdd(num){
+            if(num<=0) return;
+            console.log("Odd : ",num);
+            printEven(num-1);
+        }
+
+        // printEven(10);
+
+        function printUp(num){
+            if(num<=10){
+                console.log("Up : ",num);
+                printUp(num+1);
+            }
+            return;
+        }
+        // printUp(1);
+        function printDown(num){
+            if(num>0){
+                console.log("Down : ",num)
+                printDown(num-1);
+            }
+        }
+        // printDown(10);
+
+
+    </script>
+</body>
+</html>
