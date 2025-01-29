@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack and Queue</title>
+</head>
+<body>
+    <div>
+        <p>1) Stack</p>
+    </div>
+
+    <script>
+
+        let qu = [];
+        let currCount = qu.length;
+        let maxS = 5;
+
+        function postQu(item){
+            if(currCount<maxS){
+                qu[currCount] = item;
+                currCount++
+            }
+            else{
+                console.log("Queue Reached Its Limit");
+            }
+            console.log("Add Queue : ",qu)
+        }
+
+        function delQu(){
+            if(currCount>0){
+                for(let i =0;i<qu.length;i++){
+                    qu[i] = qu[i+1];
+                }
+                currCount--;
+                qu.length= currCount;
+                console.log("Remove Queue : ",qu)
+            }
+            else{
+                console.log("Queue is Empty")
+            }
+        }
+
+        postQu("A");
+        postQu("B");
+        postQu("C");
+        postQu("E");
+        postQu("F");
+        delQu();
+        delQu();
+
+
+
+        let stac = [];
+        let limit = 10;
+        let currSize = stac.length;
+
+        function putItem(item){
+            if(currSize<limit){
+                stac[currSize] = item;
+                currSize++;
+            }
+            else{
+                console.log("Stack Limit is Reached!");
+            }
+            console.log("Stack : ",stac)
+        }
+
+        function removeItem(){
+            if(currSize>0){
+                currSize--;
+                stac.length = currSize;
+            }
+            else{
+                console.log("Stack Reached It's Limit");
+            }
+            console.log("Stack : ",stac)
+        }
+
+        putItem("A");
+        putItem("B");
+        putItem("C");
+        putItem("E");
+        removeItem();
+        
+
+    </script>
+</body>
+</html>
