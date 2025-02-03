@@ -37,5 +37,31 @@ function bubbleSort(data,count){
 let arr1 = [5,3,7,9,1,2,4,6,8]
 // bubbleSort(arr1,arr1.length);
 
-console.log("Sorting : Bubble Sort, Insertion Sort ,Selection Sort, Merge Sort, Quick Sort, Heap Sort and String Sorting")
-console.log("Search : Linear Search, Binary Search, ")
+// console.log("Sorting : Bubble Sort, Insertion Sort ,Selection Sort, Merge Sort, Quick Sort, Heap Sort and String Sorting")
+// console.log("Search : Linear Search, Binary Search,");
+
+function binarySearch(data,ele){
+    let start = 0;
+    let end = data.length-1;
+    // let positon = 0;
+    // console.log(end)
+    while(start <= end){
+        console.log("Start : ",start);
+        console.log("End : ",end);
+        mid= Math.round((start+end)/2);
+        if(data[mid] == ele){
+            // console.log("Middle : ",mid)
+            return mid;
+        }
+        else if(data[mid]>ele){
+            end = mid-1;
+        }
+        else{
+            start = mid+1;
+        }
+    }
+    return -1;
+}
+let arr = [10,20,30,40,50,60,70,80,90]
+// binarySearch(arr,30);
+console.log("Found at : ",binarySearch(arr,70))
