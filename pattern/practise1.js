@@ -33,13 +33,20 @@ let currentSum = 0;
 for (let i = 0; i < k; i++) {
     currentSum += arr1[i];
 }
+console.log("First loop  : ",currentSum);
+console.log("============================")
 maxSum = currentSum;
 
 // Sliding window technique
 for (let i = k; i < arr1.length; i++) { 
-    console.log(arr1[i - k])
+    console.log("Current before : ",currentSum)
+    console.log(arr1[i]," - ",arr1[i - k])
     currentSum += arr1[i] - arr1[i - k]; // Slide window
+    console.log("Current after : ",currentSum)
+    console.log("MAX before: ",maxSum)
     maxSum = Math.max(maxSum, currentSum);
+    console.log("MAX after: ",maxSum)
+    console.log("==================")
 }
 
 console.log("Maximum sum of subarray of size", k, "is:", maxSum);
