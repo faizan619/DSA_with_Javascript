@@ -1,18 +1,20 @@
 console.clear()
 
-arr1 = [2,4,6,8];
-console.log("Array 1 :",arr1);
+$arr1 = [3,5,7,9];
+console.log("Array 1 :",$arr1);
 function traverse($data){
     $arr2 = [];
     for($i = 0;$i<$data.length;$i++){
-        console.log($data[$i]);
-        $arr2[$i] =multiplyByTwoPlus10($data[$i]);
+        $arr2[$i] =findFactorial($data[$i]);
     }
-    console.log("Result",$arr2);
+    console.log("Factorial : ",$arr2);
 }
 
-traverse(arr1);
+traverse($arr1);
 
-function multiplyByTwoPlus10($a){
-    return ($a*2)+10;
+function findFactorial($a){
+    if($a<=0){
+        return 1
+    }
+    return $a * findFactorial($a-1);
 }
